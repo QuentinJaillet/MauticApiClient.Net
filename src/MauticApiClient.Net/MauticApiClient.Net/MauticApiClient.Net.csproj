@@ -49,6 +49,7 @@
     <Compile Include="HttpClientProvider.cs" />
     <Compile Include="IHttpClientProvider.cs" />
     <Compile Include="MauticApi.cs" />
+    <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Contact.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
