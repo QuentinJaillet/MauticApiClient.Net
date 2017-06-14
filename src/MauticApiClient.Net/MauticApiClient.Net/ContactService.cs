@@ -1,5 +1,7 @@
 ﻿using MauticApiClient.Net.Model;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -13,6 +15,37 @@ namespace MauticApiClient.Net
         {
             _httpClientProvider = httpClientProvider;
         }
+
+        public async Task<Contacts> Get()
+        {
+            var client = _httpClientProvider.GetHttpClient();
+
+            try
+            {
+                var response = await client.GetAsync("contacts");
+                if (!response.IsSuccessStatusCode)
+                    throw new Exception();
+
+                var json = await response.Content.ReadAsStringAsync();
+                var emailsJObject = JObject.Parse(json);
+
+                var contacts = new Contacts()
+                {
+                    Total = emailsJObject.Root.SelectToken("total").Value<int>()
+                };
+
+                foreach (var emailJObject in emailsJObject.Root.SelectToken("contacts").Children())
+                    contacts.Data.Add(JsonConvert.DeserializeObject<Contact>(emailJObject.First.ToString()));
+
+                return contacts;
+            }
+            finally
+            {
+                if (client != null)
+                    client.Dispose();
+            }
+        }
+
 
         public async Task<Contact> GetById(int idContact)
         {

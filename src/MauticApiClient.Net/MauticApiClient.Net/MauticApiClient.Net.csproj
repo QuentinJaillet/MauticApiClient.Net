@@ -45,12 +45,20 @@
   <ItemGroup>
     <Compile Include="Auth\BasicAuthentication.cs" />
     <Compile Include="Auth\IAuthentication.cs" />
+    <Compile Include="CategoryService.cs" />
     <Compile Include="ContactService.cs" />
+    <Compile Include="EmailService.cs" />
     <Compile Include="HttpClientProvider.cs" />
     <Compile Include="IHttpClientProvider.cs" />
     <Compile Include="MauticApi.cs" />
+    <Compile Include="Model\Categories.cs" />
     <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\CategorySummury.cs" />
     <Compile Include="Model\Contact.cs" />
+    <Compile Include="Model\Contacts.cs" />
+    <Compile Include="Model\Email.cs" />
+    <Compile Include="Model\Emails.cs" />
+    <Compile Include="Model\NewCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

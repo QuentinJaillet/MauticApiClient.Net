@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace MauticApiClient.Net.Model
@@ -10,14 +9,13 @@ namespace MauticApiClient.Net.Model
 
         public DateTime? DateAdded { get; set; }
 
-        public int CreatedBy { get; set; }
+        public string CreatedBy { get; set; }
 
-        [JsonProperty("createdByUser")]
         public string CreatedByUser { get; set; }
 
         public DateTime? DateModified { get; set; }
 
-        public int ModifiedBy { get; set; }
+        public string ModifiedBy { get; set; }
 
         public string ModifiedByUser { get; set; }
         // todo  owner object User object that owns the contact.
@@ -39,12 +37,12 @@ namespace MauticApiClient.Net.Model
         /// <summary>
         /// Array of IPs currently associated with this contact
         /// </summary>
-        public List<string> IpAddresses { get; set; }
+        //public List<string> IpAddresses { get; set; }
 
         /// <summary>
         /// Array of all contact fields with data grouped by field group. 
         /// See JSON code example for format.This array includes an “all” key that includes an single level array of fieldAlias => contactValue pairs.
         /// </summary>
-        public List<string> Fields { get; set; }
+        //public List<string> Fields { get; set; }
     }
 }
