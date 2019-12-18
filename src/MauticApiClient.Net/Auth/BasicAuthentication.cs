@@ -13,6 +13,8 @@ namespace MauticApiClient.Net.Auth
 
         public BasicAuthentication(string username, string password)
         {
+            _username = username;
+            _password = password;
         }
     }
 }
