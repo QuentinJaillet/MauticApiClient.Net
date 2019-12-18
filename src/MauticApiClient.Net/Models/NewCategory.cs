@@ -1,4 +1,4 @@
-﻿namespace MauticApiClient.Net.Model
+﻿namespace MauticApiClient.Net.Models
 {
     public class NewCategory
     {

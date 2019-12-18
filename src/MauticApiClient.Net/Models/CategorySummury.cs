@@ -1,6 +1,6 @@
-﻿namespace MauticApiClient.Net.Model
+﻿namespace MauticApiClient.Net.Models
 {
-    public class CategorySummury
+    public class CategorySummurys
     {
         /// <summary>
         /// ID of the category

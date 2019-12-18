@@ -1,4 +1,4 @@
-﻿using MauticApiClient.Net.Model;
+﻿using MauticApiClient.Net.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;

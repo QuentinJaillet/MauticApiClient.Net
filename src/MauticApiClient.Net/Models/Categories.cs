@@ -1,12 +1,12 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MauticApiClient.Net.Model
+namespace MauticApiClient.Net.Models
 {
     public class Categories
     {
         public int Total { get; set; }
 
-        public IEnumerable<CategorySummury> Data { get; set; }
+        public IEnumerable<Category> Data { get; set; }
     }
 }

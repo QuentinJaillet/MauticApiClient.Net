@@ -1,4 +1,4 @@
-﻿using MauticApiClient.Net.Model;
+﻿using MauticApiClient.Net.Models;
 using Newtonsoft.Json;
 using System;
 using System.Net.Http;
@@ -25,7 +25,7 @@ namespace MauticApiClient.Net
                 var response = await client.GetAsync("categories");
 
                 if (!response.IsSuccessStatusCode)
-                    throw new Exception(); 
+                    throw new Exception();
 
                 var json = await response.Content.ReadAsStringAsync();
                 return JsonConvert.DeserializeObject<Categories>(json);

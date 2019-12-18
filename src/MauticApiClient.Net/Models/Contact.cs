@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MauticApiClient.Net.Model
+namespace MauticApiClient.Net.Models
 {
     public class Contact
     {
