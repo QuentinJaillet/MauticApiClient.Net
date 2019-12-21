@@ -3,7 +3,7 @@ using MauticApiClient.Net.Models.Assets;
 
 namespace MauticApiClient.Net
 {
-    public interface IAssetsService
+    public interface IAssetsClient
     {
         Asset GetAsset(int id);
 
